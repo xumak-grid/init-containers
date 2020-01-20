@@ -1,0 +1,48 @@
+{
+    "action": "coreui_Repository",
+    "method": "create",
+    "data": [
+        {
+            "attributes": {
+                "maven": {
+                    "versionPolicy": "RELEASE",
+                    "layoutPolicy": "PERMISSIVE"
+                },
+                "proxy": {
+                    "remoteUrl": "",
+                    "contentMaxAge": -1,
+                    "metadataMaxAge": 1440
+                },
+                "httpclient": {
+                    "blocked": false,
+                    "autoBlock": true,
+                    "authentication": {
+                        "type": "username",
+                        "username": "",
+                        "password": "",
+                        "ntlmHost": "",
+                        "ntlmDomain": ""
+                    }
+                },
+                "storage": {
+                    "blobStoreName": "default",
+                    "strictContentTypeValidation": true
+                },
+                "negativeCache": {
+                    "enabled": true,
+                    "timeToLive": 1440
+                }
+            },
+            "name": "xumak-nexus",
+            "format": "",
+            "type": "",
+            "url": "",
+            "online": true,
+            "authEnabled": true,
+            "httpRequestSettings": false,
+            "recipe": "maven2-proxy"
+        }
+    ],
+    "type": "rpc",
+    "tid": 19
+}

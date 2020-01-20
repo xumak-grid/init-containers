@@ -1,0 +1,40 @@
+{
+    "groups": [
+        {
+            "name": "myCompanyGroup",
+            "members": [
+                "maven-releases",
+                "maven-snapshots",
+                "xumak-nexus",
+                "xumak-nexus2"
+            ]
+        }
+    ],
+    "hosteds": [
+        {
+            "name": "myCompanyHosted",
+            "versionPolicy": "RELEASE",
+            "layoutPolicy": "PERMISSIVE"
+        }
+    ],
+    "proxies": [
+        {
+            "name": "xumak-nexus",
+            "versionPolicy": "RELEASE",
+            "layoutPolicy": "PERMISSIVE",
+            "remoteUrl": "http://my-cool-url",
+            "requiredAuth": true,
+            "authentication": {
+                "username": "myusername",
+                "password": "mypassword"
+            }
+        },
+        {
+            "name": "xumak-nexus2",
+            "versionPolicy": "RELEASE",
+            "layoutPolicy": "PERMISSIVE",
+            "remoteUrl": "http://my-cool-url",
+            "requiredAuth": false
+        }
+    ]
+}

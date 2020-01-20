@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gogs-init-job
+  namespace: bedrock
+spec:
+  template:
+    spec:
+      containers:
+      - name: init-gogs
+        image: /grid/init-gogs:1.0.0
+        imagePullPolicy: Always
+        volumeMounts:
+          - name: init-config
+            mountPath: "/app/config"
+            readOnly: true
+        env:
+          - name: GOGS_HOST
+            value: 
+          - name: GOGS_CONFIG_FILE
+            value: /app/config/configFile.json
+      restartPolicy: Never
+      volumes:
+        - name: init-config
+          secret:
+            secretName: gogs-init-config
+  backoffLimit: 3

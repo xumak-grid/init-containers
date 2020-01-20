@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nexus-init-job
+  namespace: bedrock
+spec:
+  template:
+    spec:
+      containers:
+      - name: init-nexus
+        image: /grid/init-nexus:1.0.0
+        imagePullPolicy: Always
+        volumeMounts:
+          - name: init-config
+            mountPath: "/app/config"
+            readOnly: true
+        env:
+          - name: NEXUS_USER
+            value: admin
+          - name: NEXUS_PASS
+            value: admin123
+          - name: NEXUS_HOST
+            value: 
+          - name: NEXUS_CONFIG_FILE
+            value: /app/config/configFile.json
+      restartPolicy: Never
+      volumes:
+        - name: init-config
+          secret:
+            secretName: nexus-init-config
+  backoffLimit: 3

@@ -1,0 +1,27 @@
+{
+    "action": "coreui_Repository",
+    "method": "create",
+    "data": [
+        {
+            "attributes": {
+                "maven": {
+                    "versionPolicy": "RELEASE",
+                    "layoutPolicy": "STRICT"
+                },
+                "storage": {
+                    "blobStoreName": "default",
+                    "strictContentTypeValidation": true,
+                    "writePolicy": "ALLOW"
+                }
+            },
+            "name": "myCompanyHosted",
+            "format": "",
+            "type": "",
+            "url": "",
+            "online": true,
+            "recipe": "maven2-hosted"
+        }
+    ],
+    "type": "rpc",
+    "tid": 49
+}

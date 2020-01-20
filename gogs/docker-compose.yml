@@ -1,0 +1,16 @@
+version: '2'
+services:
+  gogs:
+    image: /grid/gogs:0.11.34
+    ports:
+      - 8181:3000
+  init:
+    image: /grid/init-gogs:1.0.0
+    ports:
+      - 3000:3000
+    environment:
+      GOGS_HOST: http://gogs:3000
+      GOGS_CONFIG_FILE: examples/configFileEP.json
+    depends_on:
+     - gogs
+     

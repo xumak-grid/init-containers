@@ -1,0 +1,40 @@
+{
+    "init_data": {   
+        "domain": "gogs",
+        "http_port": "3000",
+        "app_url": "http://gogs:3000",
+        "admin_name": "tikal",
+        "admin_passwd": "tikal",
+        "admin_confirm_passwd": "tikal",
+        "admin_email": "admin@xumak.com",
+        "repo_root_path": "/data/git/gogs-repositories",
+        "log_root_path":"/app/gogs/log"
+    },
+    "organizations": [
+        {
+            "username": "myOrg",
+            "full_name": "Test Organization",
+            "description": "Gogs is a painless self-hosted Git Service.",
+            "website": "https://gogs.io",
+            "location": "GUA"
+        }
+    ],
+    "repositories": [
+        {
+            "name": "hello-world",
+            "description": "This is your first repository",
+            "private": false,
+            "owner": "myOrg",
+            "content_setup_type":"danta-aem-archetype",
+            "danta_aem_archetype": {
+                "archetype_version":"1.0.0-SNAPSHOT",
+                "group_id": "com.dantaexample",
+                "artifact_id":"danta-example",
+                "app_name": "danta-example",
+                "package": "com.dantaexample",
+                "server_url": "http://localhost:4502",
+                "nexus_url": "http://some.repo/repository/danta-group"
+            }
+        }
+    ]
+}

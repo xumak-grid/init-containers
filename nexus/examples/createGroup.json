@@ -1,0 +1,29 @@
+{
+    "action": "coreui_Repository",
+    "method": "create",
+    "data": [
+        {
+            "attributes": {
+                "storage": {
+                    "blobStoreName": "default",
+                    "strictContentTypeValidation": true
+                },
+                "group": {
+                    "memberNames": [
+                        "maven-releases",
+                        "maven-snapshots",
+                        "xumak-nexus"
+                    ]
+                }
+            },
+            "name": "myCompany",
+            "format": "",
+            "type": "",
+            "url": "",
+            "online": true,
+            "recipe": "maven2-group"
+        }
+    ],
+    "type": "rpc",
+    "tid": 27
+}
